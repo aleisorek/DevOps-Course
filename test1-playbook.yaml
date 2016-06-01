@@ -11,11 +11,11 @@
     become_method: sudo
 
   - name: Clone Shimi's (shimib) GitHub aleisorek/spring-petclinic repository
-    git: repo=git://github.com/aleisorek/spring-petclinic.git dest=~/spring-petclinic
+    git: repo=git://github.com/aleisorek/spring-petclinic.git dest=~/spring-petclinic update=no
 
 
   - name: Clone DevOps-Course GitHub repository
-    git: repo=git://github.com/aleisorek/DevOps-Course.git dest=~/DevOps-Course
+    git: repo=git://github.com/aleisorek/DevOps-Course.git dest=~/DevOps-Course update=no
 
   - name: Download Maven Appache web server (tar.gz)
     # Unarchive a file that needs to be downloaded (added in 2.0)
