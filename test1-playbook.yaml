@@ -17,3 +17,6 @@
   - name: Clone DevOps-Course GitHub repository
     git: repo=git://github.com/aleisorek/DevOps-Course.git dest=~/DevOps-Course
 
+  - name: Download Maven Appache web server (tar.gz)
+    # Unarchive a file that needs to be downloaded (added in 2.0)
+    - unarchive: src=http://apache.spd.co.il/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=/tmp copy=no
