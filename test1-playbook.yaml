@@ -1,0 +1,19 @@
+- hosts: localhost
+  tasks:
+  - name: DevOps Excersice #1 - Install GIT and clone a project
+    ping:
+    become: yes
+    become_method: sudo
+
+  - name: Install git
+    yum: name=git state=latest
+    become: yes
+    become_method: sudo
+
+  - name: Clone Shimi's (shimib) GitHub aleisorek/spring-petclinic repository
+    git: repo=git://github.com/aleisorek/spring-petclinic.git dest=~/spring-petclinic
+
+
+  - name: Clone DevOps-Course GitHub repository
+    git: repo=git://github.com/aleisorek/DevOps-Course.git dest=~/DevOps-Course
+
